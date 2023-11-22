@@ -1,0 +1,2 @@
+var html = '<a id= "name" href="file:///C:/Users/Emily/website/htmlpractice.htm"><h1>ej</h1></a><div class="circle"></div><a href="file:///C:/Users/Emily/website/about.htm"> about </a><a href="file:///C:/Users/Emily/website/contact.htm">contact</a><a href="file:///C:/Users/Emily/website/portfolio.htm">portfolio</a></div>';
+document.getElementById('sidebar').innerHTML = html;
