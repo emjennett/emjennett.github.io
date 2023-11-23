@@ -82,7 +82,7 @@ h1{ /* Emily Jennett */
     grid-column: 2/4;
     grid-row:2/3;
     display: grid;
-    grid-template-rows:130px 500px 500px 500px 90px 500px 500px 500px 80px 250px;
+    grid-template-rows:130px 530px 530px 530px 90px 530px 530px 530px 80px 250px;
     grid-template-columns: 1fr 1fr;
     padding-right:50px;
     padding-left:30px;
@@ -271,7 +271,7 @@ h5{ /* cat enthusiast */
 
 .home>img{
     max-width:500px;
-    max-height:400px;
+    max-height:450px;
     border-radius: 5px;
 }
 
