@@ -62,7 +62,16 @@ h1{ /* Emily Jennett */
     top: 100px;
     left:110px;
   }
+.main>li a:visited, .main>li a:link{
+    text-decoration: underline;
+    color: black;
+}
 
+.main>li a:hover, .main>li a:active{
+    text-decoration: underline;
+    color: #DDB0B1;
+    background-color: white;
+}
 
 #sidebar #name:hover, :active {
     background-color: white;
