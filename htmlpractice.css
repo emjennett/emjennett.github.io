@@ -40,7 +40,7 @@ h1{ /* Emily Jennett */
     padding: 10px 5px;
 }
 
-#sidebar a:link, a:visited, .skillset a:link, a:visited{
+#sidebar a:link, a:visited, .skillset a:link, a:visited, li a:visited, li a:link{
     color:black;
     text-decoration: none;
 }
