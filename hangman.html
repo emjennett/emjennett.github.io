@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head> 
+    <title>Hangman</title>
+    <link rel="stylesheet" href="htmlpractice.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<body>
+    <div class = "wrapper" style= "grid-template-rows:20px auto;">
+
+        <div id = "sidebar">
+        </div>
+
+        <div class = "grid2" style = "grid-template-rows: 470px auto; padding-left:70px;">
+            <img src="Hangman.png" alt="Ice Cream Dash game play snapshot" style = "max-width:720px;
+            max-height:530px; border-radius: 5px;">
+            <div class= "title" style= "font-weight: 900;">
+                <p>Hangman</p>
+            </div>
+            <p style = "color : #dd5a9b; font-size:20px;"> Python & Tkinter</p>
+            <div class= "title" style = "font-size: 30px;">
+                <p>objectives</p>
+            </div>
+
+            <p> Hangman is a written in Python and displayed using the Tkinter GUI. This program embodies the 
+                classic game of Hangman-- The computer chooses a random word of a certain category that the player
+                must guess letter-by-letter. With each incorrect guess, a body part is added to Bob, out to-be-hanged man.
+                 Once Bob gains all of his body parts, the player loses. If the player manages to correctly guess the word
+                 before Bob is hanged, the player wins!
+            </p>
+            <div class= "title"style = "font-size: 30px;">
+                <p>development</p>
+            </div>
+            <p> The Hangman game first chooses a randomized word out of 5 categories within a database.
+                A graphical keyboard is diplayed at the bottom of the screen which is for the user to choose their letters
+                 that they guess to be a part of the given word. Each incorrectly-guessed letter on the keyboard 
+                 turns red and is disabled, while each correctly guessed letter replaces its space in the word and 
+                 also becomes disabled. Either a "game over" or "you win" screen is displayed depending on if all the 
+                 body parts appear under the scaffold, or if all the letter of the word are filled. 
+            </p>
+                <div class= "title"style = "font-size: 30px;">
+                    <p>future</p>
+                </div>
+            <p>
+                For future developments, Hangman can involve a timer, to will incorporate a layer of pressure upon
+                the users to perform within a time constraint. Under this condition, the game over screen may also appear
+                if the player fails to successfully guess the word in time. Another idea is to 
+            </p>
+            <div class="footer">
+                <p>@2023 ~ Emily Jennett</p>
+            </div>
+        </div>
+
+    
+    </div>
+
+    <script src="myscript.js"></script>
+
+</body> 
