@@ -291,10 +291,11 @@ h5{ /* cat enthusiast */
     text-decoration: underline;
 }
 
-.caption a:visited,  a:link{
+.caption a:visited, a:link{
     text-decoration: underline;
     color: black;
 }
+
 
 
 .oh2>a>img{
