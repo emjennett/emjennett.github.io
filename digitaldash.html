@@ -2,9 +2,10 @@
 <head> 
     <title>Digital Dining Divas</title>
     <link rel="stylesheet" href="htmlpractice.css">
+    <link rel="icon" href="ej..svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -34,17 +35,32 @@
             <div class= "title"style = "font-size: 30px;">
                 <p>development</p>
             </div>
-            <p> The Hangman game first chooses a randomized word out of 5 categories within a database.
-            A graphical keyboard is diplayed at the bottom of the screen which is for the user to choose their letters
-            that they guess to be a part of the given word. Each incorrectly-guessed letter on the keyboard 
-            turns red and is disabled, while each correctly guessed letter replaces its space in the word and 
-            also becomes disabled. Either a "game over" or "you win" screen is displayed depending on if all the 
-            body parts appear under the scaffold, or if all the letter of the word are filled. 
+            <p> Digital Dining dash is entirely written in Java, and utilizes the Swing API for graphics. This project was initially
+                collaborative (see the <span ><a href = "https://github.com/emjennett/myvers-digitaldiningdivas" style=" color: #DDB0B1;">github repo</a></span>  to view its editing history, and all the fabulous additions by my fellow group
+                members!), however it was unfortunately very much unfinished and buggy by the time it was submitted, so I worked on it
+                afterwards to fix it up. The focus of this project was primarily clean architecture (CA), which is a design philosophy developed by Uncle Bob
+                to organize code in a way that separates their responsibilities. My group members and I seemed to struggle to grasp the concepts of CA at first,
+                but as I now continue to add on to the project, it is pretty straightforward (albeit bulky)! If you are to look
+                through the code, you'll find that there are around 2 interfaces, and a handful of classes associated with each 
+                use case of the application. The purpose of this is to add layers of separation, effectively splittng the front-end from the back-end. 
+                The entity layer of the program (being users, restaurants, and dishes) are stored using serialization, so that data is fetched
+                through a model rather than the entity directly. Graphical content is fetched from "response models". Controllers modulate behaviour
+                between data access and the "presenting classes" (the presenting classes being those that instantiate GUI stuff) by use of interactor classes.
+                This arrangement makes it quite easy for an entity to be updated through the entire program, all the way to where it is stored, with 
+                each action taken by a user. Updates may include favouriting a restaurant, an owner editing their restaurant, or a user
+                editing their profile.
+
             </p>
 
             <div class= "title"style = "font-size: 30px;">
                 <p>user stories</p>
             </div>
+
+            <p>Here are some hypothetical interactions with the program that helped our group decide how to decompose
+                the scope of our project into use cases:
+
+            </p>
+
 
             <p style = "color: #687A6E;margin-bottom:0px;">Restaurant feedback</p>
             <p style= "margin-top:0px;"> Abdelrazak is a restaurant owner who wants to open a new location that is too small to offer
@@ -76,7 +92,9 @@
                 For future developments, Digital Dining Divas can incorporate a flagging system to be able to restrict
                 inappropriate, irrelevant, and malicious content. This would of course be permissable by specific agents
                 such as restaurant owners and/or the administrators of the site. Further, this application can have a 
-                data analytics page accessible by the administrator.
+                data analytics page accessible by the administrator. I also think it would be beneficial to incorporate
+                a database-driven design, maybe with MYSQL, as there is a constant influx and efflux of data throughout the 
+                usage of this program.
             </p>
             <div class="footer">
                 <p>@2023 ~ Emily Jennett</p>
