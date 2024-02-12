@@ -81,13 +81,14 @@ h1{ /* ej*/
     grid-column: 2 / 4;
     grid-row: 1/2;
 
+
 }
 
 #grid1{
     grid-column: 2/4;
     grid-row:2/3;
     display: grid;
-    grid-template-rows:130px 480px 480px 90px 200px 200px;
+    grid-template-rows:130px 480px 480px 300px auto;
     grid-template-columns: 1fr 1fr;
     padding-right:50px;
     padding-left:30px;
@@ -98,23 +99,31 @@ h1{ /* ej*/
 }
 
 .grid2{
-    grid-row-gap: 30px;
     grid-column: 2/4;
     grid-row:2/3;
-    display: grid;
-    grid-template-rows:90px 480px 480px 480px 480px 90px;
-    align-items: center;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+    padding-right:50px;
     padding-left:30px;
-    padding-right:70px;
     overflow:hidden;
     
 }
-.grid2>p{
+ .flex>p{
     font-family: "Poppins", sans-serif;
     font-size: 15px;
 }
 
+.flex{
+    display:flex;
+    flex-direction: column;
+    padding-left:90px;
+    padding-right:70px;
+    flex-wrap: wrap;
+    grid-column: 2/4;
+    grid-row:2/3;
+
+
+}
 
 
 #wrapperalt{
@@ -127,11 +136,15 @@ h1{ /* ej*/
 }
 
 .wrapper{
+    width:100%;
     display: grid;
     overflow: hidden;
     grid-template-columns: 250px 1fr 1fr;
     grid-template-rows:250px auto;
+    padding-right:30px;
     gap: 30px;
+    overflow:hidden;
+
 }
 
 html{
@@ -139,6 +152,7 @@ html{
 }
 body {
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 @keyframes fadeIn {
@@ -264,31 +278,37 @@ h5{ /* cat enthusiast */
 }
 
 .title{
+    padding: 50px 0 0 0;
     grid-column: 1/3;
     font-size: 35px;
     font-weight: 400;
     font-family: 'Poppins', sans-serif;
 }
 
-
-.home, .first{
-    grid-column:1/3;
-    display: flex; 
+.elementsec, .first{
     align-items: center;
-    justify-self: start;
+    display:flex;
     flex-wrap: wrap;
 }
 
-.home>p, .first>p{
+.home{
+    justify-content: space-between;
+    flex-basis:60%;
+    display: flex; 
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.home>p{
     font-size: 30px;
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
 }
 
 
-.home> a> img, .first>a>img{
-    max-width:500px;
-    max-height:450px;
+.home> a> img, .first>a>img, .home>img{
+    width:100%;
+
     border-radius: 5px;
     
 }
@@ -352,22 +372,31 @@ h6{ /* headings for each page */
 
 .title>p{
     margin-bottom:0px;
+    margin-top:0px;
 }
 
 
-.home>img, .first>img{
-    max-width:530px;
-    max-height:450px;
+.caption2{
+    flex-basis:36%;
+    display: flex;
+    flex-direction: column;
 
 }
 
-.caption>p{
+.caption2> a>p, .caption2>a, .elementsec>p, .first>p, .caption2>p{
     font-size: 15px;
     font-weight: 400;
-    margin: 2px 2px;
+    margin: 0 0;
+    padding: 0 0;
     font-family: 'Poppins', sans-serif;
+    text-decoration: none;
 
 }
+.elementsec, .first{
+    display:flex;
+    gap:3%;
+}
+
 
 .caption{
     max-width: 400px;
@@ -380,14 +409,15 @@ h6{ /* headings for each page */
     margin-bottom:60px;
 }
 
-.home{
+
+.elementsec{
     position: relative;
     transform: translateY(100px);
     opacity: 0;
     transition: 1s all ease;
   }
   
-.home.active{
+.elementsec.active{
     transform: translateY(0);
     opacity: 1;
 }
@@ -401,8 +431,11 @@ h6{ /* headings for each page */
     font-family: 'Poppins', sans-serif;
 
 }
-
 .footer{
-    grid-column:1/3;
-    align-self:end;
+    padding-top: 40px;
+}
+
+.grid2 .footer{
+    
+    flex-basis: 100%
 }

@@ -15,30 +15,38 @@
         <div id = "sidebar">
         </div>
 
-        <div class = "grid2" style = "grid-template-rows: 470px 70px auto ; padding-left:100px;">
+        <div class = "flex">
             <img src="lunarlogs.png" alt="Ice Cream Dash game play snapshot" style =  "max-width:720px;
             max-height:530px; border-radius: 5px;">
     
             <div class= "title" style= "font-weight: 900;">
                 <p>Lunar Logs</p>
             </div>
-            <p style = "color : #dd5a9b; font-size:20px;"> HTML/CSS/JS & PHP/MYSQL</p>
+            <p style = "color : #dd5a9b; font-size:20px;"> HTML/CSS/JS & Node.js & MySQL</p>
             <div class= "title" style = "font-size: 30px;">
                 <p>objectives</p>
             </div>
-            <p>  Lunar Logs is a database-driven web application that hosts up-to-date moon data and personal horoscopes by use of data collection and storage with MYSQL.
-                The site grabs locational data from the user, and uses Skyfield to display accurate astronomical data. With the user's 
-                identificational data, data is taken from AstroDataBank for horoscopes.
+            <p>  Lunar Logs is a database-driven web application that hosts up-to-date moon data and personal horoscopes by use of data collection and storage in MySQL.
+                The site grabs locational data from the user to display astronomical data, and users fill out a questionnaire
+                to receive their daily horoscopes.
             </p>
             <div class= "title"style = "font-size: 30px;">
                 <p>development</p>
             </div>
-            <p> Lunar Logs  </p>
+            <p> Lunar Logs uses MySQL to store user data and its corresponding astronomical/astrological data associated
+                with the user's location and profile information. Astronomical data is calculated using the SkyField API, 
+                while the astrological data is extracted from AstroDataBank. Node.js modulates the server-side code, and
+                acts as the intermediate between the databases and the front-end of the site. 
+
+            </p>
                 <div class= "title"style = "font-size: 30px;">
                     <p>future</p>
                 </div>
             <p>
-                For future developments, Lunar Logs can provide a more diverse spread of astronomical data.
+                For future developments, Lunar Logs can provide a more diverse spread of astronomical data. For example, rather
+                than simply offering moon data, it can also include information about other celestial bodies, constellations, upcoming meteor showers,
+                and other elements of the sky that astronomy enthusiasts would find useful. I also think it would be cute to add a 
+                "diary" page so that users can jot down and save anything that comes to mind as they navigate the site.
             </p>
             <div style= "grid-column:1/3" class="footer">
                 <p>@2023 ~ Emily Jennett</p>

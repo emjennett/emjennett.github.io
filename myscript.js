@@ -2,7 +2,7 @@ var html = '<a id= "name" href="/index.html"><h1>ej</h1></a><div class="circle">
 document.getElementById('sidebar').innerHTML = html;
 
 function reveal() {
-    var reveals = document.querySelectorAll(".home");
+    var reveals = document.querySelectorAll(".elementsec");
   
     for (var i = 0; i < reveals.length; i++) {
       var windowHeight = window.innerHeight;
