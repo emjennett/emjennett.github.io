@@ -199,7 +199,7 @@ html, body {
 }
 
 @keyframes catenthusiast{
-    from {right: 300px; top:13vw;  opacity:0}
+    from {right: 40vw; top:13vw;  opacity:0}
     to {right: 5vw; top:13vw; opacity:1}
 }
 
@@ -473,6 +473,10 @@ h6{ /* headings for each page */
     flex-basis: 100%
 }
 
+.grid2 p{
+    flex-basis:60%;
+}
+
 
 @media only screen and (max-width: 800px) {
     .elementsec , .first{
@@ -564,5 +568,8 @@ h6{ /* headings for each page */
 
     .grid2{
         gap:12vw;
+    }
+    .grid2>p{
+        flex-basis:100%;
     }
 }
