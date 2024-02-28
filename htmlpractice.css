@@ -323,6 +323,10 @@ h5{ /* cat enthusiast */
 }
 #invisible{
     visibility: hidden;
+}
+#invisible2{
+    visibility: hidden;
+    order:1;
     
 }
 
@@ -515,10 +519,15 @@ h6{ /* headings for each page */
 @media only screen and (max-width: 800px) {
     .elementsec , .first{
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         flex-wrap:nowrap;
         
 
+    }
+    .title{
+        flex-basis:100%;
+        justify-content: space-between;
+        align-content: space-between;
     }
  
 
@@ -599,8 +608,9 @@ h6{ /* headings for each page */
     #alternate{
         flex-direction: row;
     }
-    #invisible{
+    #invisible, #invisible2{
         visibility: visible;
+        order:0;
     }
 
     #visible{
@@ -611,8 +621,8 @@ h6{ /* headings for each page */
         padding: 0 0 0 0;
     }
 
-    .caption2> a>p, .caption2>a, .elementsec>p, .first>p{
-        font-size: 2.2vw;
+    .caption2> a>p, .caption2>a, #leftside, .caption2>p,.elementsec>p, .first>p{
+        font-size: 3vw;
         text-align:center;
     }
 
