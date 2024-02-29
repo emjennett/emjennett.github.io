@@ -19,6 +19,28 @@ function reveal() {
   
   window.addEventListener("scroll", reveal);
 
+  function preload(arrayOfImages) {
+    $(arrayOfImages).each(function(){
+        $('<img/>')[0].src = this;
+        
+    });
+}
+preload([
+  "tech.png",
+  "art.png",
+  "icecreamdash.png",
+  "ddd.png",
+  "Hangman.png",
+  "lunarlogs.png",
+  "kafka.jpeg",
+  "nightwalker.jpg",
+  "frog.JPEG",
+  "abstract.jpg",
+  "thering.png",
+  "deer.jpg"
+]);
+
+  //switches out first element of index.html when on mobile so animation doesn't apply
   $(document).ready(function() {
     if ($(window).width() < 800) {
         var element = $('#stationary');
