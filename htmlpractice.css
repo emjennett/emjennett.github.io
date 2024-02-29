@@ -27,6 +27,7 @@ h1{ /* ej*/
 #rightside{
     text-align:right;
     justify-content: flex-end;
+    
 }
 
 #leftside{
@@ -497,7 +498,7 @@ h6{ /* headings for each page */
     padding:0 0;
     font-size: 3vw;
     font-family: 'Poppins', sans-serif;
-    display:flex;
+
 }
 #altt{
     text-align: right;
