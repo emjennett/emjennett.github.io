@@ -19,3 +19,11 @@ function reveal() {
   
   window.addEventListener("scroll", reveal);
 
+  $(document).ready(function() {
+    if ($(window).width() < 800) {
+        var element = $('#stationary');
+        if (element.length > 0 && element.hasClass('elementsec')) {
+            element.removeClass('elementsec').addClass('first');
+        }
+    }
+});

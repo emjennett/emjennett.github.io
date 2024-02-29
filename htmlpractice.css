@@ -132,6 +132,7 @@ h1{ /* ej*/
 
 .grid2 p{
     font-family: "Poppins", sans-serif;
+    flex-basis:65%;
 }
  .flex>p{
     font-family: "Poppins", sans-serif;
@@ -357,9 +358,12 @@ h5{ /* cat enthusiast */
 
 .home> a> img, .first>a>img, .home>img{
     width:100%;
-
     border-radius: 5px;
     
+}
+.grid2>img{
+
+    flex-basis:30%;
 }
 
 .caption a:hover, a:active{
@@ -516,6 +520,7 @@ h6{ /* headings for each page */
 
 
 
+
 @media only screen and (max-width: 800px) {
     .elementsec , .first{
         flex-direction: column;
@@ -626,6 +631,14 @@ h6{ /* headings for each page */
         text-align:center;
     }
 
+    .grid2 p{
+        font-size: 2.2vw;
+        flex-basis:100%;
+    }
+    .grid2 img{
+        flex-basis: 80%;
+    }
+
 
     .title>p, .arttitle>p, .num>p{
         flex-basis: auto;
@@ -642,9 +655,9 @@ h6{ /* headings for each page */
     }
 
     .grid2{
-        gap:12vw;
+        gap:8vw;
+        flex-wrap: wrap;
+        justify-content: center;
     }
-    .grid2>p{
-        flex-basis:100%;
-    }
+
 }
