@@ -131,8 +131,8 @@ h1{ /* ej*/
 }
 
 .grid2 p{
+    flex-basis:60%;
     font-family: "Poppins", sans-serif;
-    flex-basis:65%;
 }
  .flex>p{
     font-family: "Poppins", sans-serif;
@@ -358,12 +358,9 @@ h5{ /* cat enthusiast */
 
 .home> a> img, .first>a>img, .home>img{
     width:100%;
+
     border-radius: 5px;
     
-}
-.grid2>img{
-
-    flex-basis:30%;
 }
 
 .caption a:hover, a:active{
@@ -426,6 +423,7 @@ h6{ /* headings for each page */
     font-size: 2.5vw;
     margin-bottom:0px;
     margin-top:0px;
+    line-height:3vw;
 
 }
 
@@ -530,6 +528,7 @@ h6{ /* headings for each page */
 
     }
     .title{
+        
         flex-basis:100%;
         justify-content: space-between;
         align-content: space-between;
@@ -590,7 +589,7 @@ h6{ /* headings for each page */
         text-align: center;
     }
 
-    .title p, .arttitle p, .num p{
+    .title p, .arttitle, .num p{
         font-size: 4vw;
         text-align: center;
     }
@@ -621,9 +620,12 @@ h6{ /* headings for each page */
     #visible{
         display:none;
     }
+    .title{
+        padding-top:3px;
+    }
 
-    .title, .arttitle, .num{
-        padding: 0 0 0 0;
+    .arttitle, .num{
+        padding: 2px 2px;
     }
 
     .caption2> a>p, .caption2>a, #leftside, .caption2>p,.elementsec>p, .first>p{
@@ -633,15 +635,15 @@ h6{ /* headings for each page */
 
     .grid2 p{
         font-size: 2.2vw;
-        flex-basis:100%;
     }
-    .grid2 img{
-        flex-basis: 80%;
+    #headshot{
+        flex-basis:30%;
     }
-
 
     .title>p, .arttitle>p, .num>p{
+        font-size: 4vw;
         flex-basis: auto;
+       
     }
     @keyframes links{
         from {right: 6vw; top:30vw;  opacity:0}
@@ -655,9 +657,9 @@ h6{ /* headings for each page */
     }
 
     .grid2{
-        gap:8vw;
-        flex-wrap: wrap;
-        justify-content: center;
+        gap:12vw;
     }
-
+    .grid2>p{
+        flex-basis:100%;
+    }
 }
