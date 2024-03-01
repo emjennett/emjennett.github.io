@@ -37,7 +37,8 @@ preload([
   "frog.JPEG",
   "abstract.jpg",
   "thering.png",
-  "deer.jpg"
+  "deer.jpg",
+  "pfp.jpg"
 ]);
 
   //switches out first element of index.html when on mobile so animation doesn't apply
