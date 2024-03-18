@@ -1,5 +1,4 @@
-var html = '<a id= "name" href="/index.html"><div id = "logowrapper"><h1>ej</h1></a><div class= "circlewrap"><div class="circle"></div></div></div><a href="/about.html"> about </a><a href="/contact.html">contact</a><a href="/portfolio.html">portfolio</a></div>';
-document.getElementById('sidebar').innerHTML = html;
+
 
 function reveal() {
     var reveals = document.querySelectorAll(".elementsec");
