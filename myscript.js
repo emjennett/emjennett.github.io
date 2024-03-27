@@ -1,3 +1,5 @@
+var html ='<div class = "wrapper2"><a id= "name" href="/index.html"><div id = "logowrapper"><h1>ej</h1></a><div class= "circlewrap"><div class="circle"></div></div></div><nav><ul><li class="sub-menu-parent" tab-index="0"><a href="/about.html">about</a></li><li class="sub-menu-parent" tab-index="0"><a href="/contact.html">contact</a></li><li class="sub-menu-parent" tab-index="0"><a href="#">portfolio</a><ul class="sub-menu"><li><a href="portfolio.html#tech">tech</a></li><li><a href="portfolio.html#art">art</a></li></ul></li></ul></nav>'
+document.getElementById('sidebar').innerHTML = html;
 
 
 function reveal() {
@@ -6,7 +8,7 @@ function reveal() {
     for (var i = 0; i < reveals.length; i++) {
       var windowHeight = window.innerHeight;
       var elementTop = reveals[i].getBoundingClientRect().top;
-      var elementVisible = 50;
+      var elementVisible = 100;
   
       if (elementTop < windowHeight - elementVisible) {
         reveals[i].classList.add("active");
@@ -23,6 +25,22 @@ function reveal() {
         $('<img/>')[0].src = this;
         
     });
+}
+
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for(i=0; i<dropdown.length;i++){
+  dropdown[i].addEventListener("mouseover", function(){
+    this.classList.toggle("active");
+    var dropdownContent=this.nextElementSibling;
+    if (dropdownContent.style.display ==="none"){
+      dropdownContent.style.display = "block";
+    
+    }else{
+      dropdownContent.style.display = "none";
+    }
+  });                                       
 }
 preload([
   "tech.png",
@@ -49,3 +67,4 @@ preload([
         }
     }
 });
+

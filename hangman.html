@@ -1,21 +1,45 @@
 <!DOCTYPE html>
 <head> 
     <title>Hangman</title>
+    <link rel="icon" href="ej..svg">
+    
     <link rel="stylesheet" href="htmlpractice.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="icon" href="ej..svg">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <body>
 
-    <div id = "sidebar">
-    </div>
     <div class = "outerwrapper">
+        
+        <div id="sidebar"> 
+            
+        </div>                              
+    </div>
 
         <div class = "flex" >
+            <div class = "topnav">
+                <a href= "/index.html" style="justify-self:flex-start;">
+                    home
+                </a>
+                <button class = "dropdown-btn">
+                    icon
+                </button>
+                <div class = "dropdown-cont">
+                    <a href="/about.html">about </a>
+                    <a href="/contact.html">contact</a>
+                    <li class="sub-menu-parent" tab-index="0">
+                        <a href="#">Menu Item 3</a>
+                        <ul class="sub-menu">
+                          <li><a href="#">Sub Item 1</a></li>
+                          <li><a href="#">Sub Item 2</a></li>
+                        </ul></li>
+                
+                </div>
+            </div>
+
             <img src="Hangman.png" alt="Ice Cream Dash game play snapshot" style = "flex-basis: 100%; border-radius: 5px;">
             <div class= "title" style= "font-weight: 900;">
                 <p>Hangman</p>

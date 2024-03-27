@@ -16,8 +16,16 @@ h1{ /* ej*/
     flex-basis:17%;
     height: 100vh;
     position:fixed;
-    left:8%;
+    left:5%;
+    z-index:1;
 
+}
+nav li, ul li{
+    text-align:right;
+    list-style: none;
+}
+.sub-menu-parent{
+    padding-bottom:15px;
 }
 
 .caption2>p{
@@ -34,20 +42,48 @@ h1{ /* ej*/
     text-align:left;
     justify-content: flex-start;
 }
-#sidebar a {
+#sidebar a, .dropdown-btn{
     text-decoration: none;
     font-size: 20px;
     align-self:flex-end;
     font-family: 'Poppins', sans-serif;
     padding: 10px 5px;
+    display:block;
+    outline:none;
+    background:none;
+    border:none;
 }
+
+.topnav{
+    display:none;
+}
+
+
+.sub-menu { 
+    visibility:hidden; /* hides sub-menu */
+    opacity: 0;
+    position: absolute;
+    transform: translateY(-2em);
+    z-index: -1;
+    transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+  }
+  
+  .sub-menu-parent:hover .sub-menu {
+    visibility:visible; /* shows sub-menu */
+    opacity: 1;
+    z-index: 1;
+    transform: translateY(0%);
+    transition-delay: 0s, 0s, 0.3s; /* this removes the transition delay so the menu will be visible while the other styles transition */
+  }
+  
+
 
 #sidebar a:link, a:visited, #skillset a:link, a:visited, li a:visited, li a:link{
     color:black;
     text-decoration: none;
 }
 
-#sidebar a:hover, a:active, li a:hover, a:active, #skillset a:hover, a:active  {
+#sidebar a:hover, a:active, li a:hover, a:active, #skillset a:hover, a:active, .dropdown-btn:hover, .dropdown-btn:active {
     background-color: white;
     color: #DDB0B1;
     text-decoration: underline;
@@ -141,18 +177,19 @@ h1{ /* ej*/
     
 }
 
-#grid1>p{
+#grid1 p{
     flex-basis:53%;
     font-family: "Poppins", sans-serif;
+    line-height:25px;
 }
 
 .grid2 p{
 
     font-family: "Poppins", sans-serif;
 }
- .flex>p, .container p{
+.flex p, .container p{
     font-family: "Poppins", sans-serif;
-    font-size: 1.2vw;
+    font-size: 1.3vw;
 }
 
 
@@ -166,6 +203,7 @@ h1{ /* ej*/
     padding-right:15vw;
     padding-top:4vw;
     overflow:hidden;
+    line-height:20px;
     
 }
 
@@ -173,16 +211,17 @@ h1{ /* ej*/
     flex-basis:75%;
 
 }
+
 .wrapper2{
     flex-basis:75%;
-    gap: 2vw;
+    padding-top:2vw;
     display: flex;
     flex-direction: column;
 }
 
 
 .outerwrapper {
-    
+    flex-basis:17%;
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse;
@@ -222,7 +261,7 @@ html, body {
 
 @keyframes heyitsemily{
     from {left: -40vw; top:4vw;  opacity:0}
-    to {left: 18vw;top:4vw;opacity:1}
+    to {left: 42vw;top:4vw;opacity:1}
 
 }
 
@@ -256,7 +295,7 @@ h2{ /* hey im emily */
     font-size: 2.3vw;
     font-weight: 400;
     animation: heyitsemily 1s;
-    left: 18vw;
+    left: 42vw;
     top:4vw;
 
 }
@@ -410,7 +449,7 @@ h5{ /* cat enthusiast */
 }
 
 #skillset{
-    font-size: vw;
+    font-size: 1.8vw;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     align-self:start;
@@ -571,6 +610,13 @@ h6{ /* headings for each page */
         
 
     }
+
+    .topnav{
+        display:flex;
+        flex-direction: row;
+        justify-content:flex-end;
+    }
+    
     .title{
         
         flex-basis:100%;
@@ -609,17 +655,23 @@ h6{ /* headings for each page */
     }
     #sidebar{
         left:4%;
+        display:none;
     }
-    #sidebar a{
-        font-size: 10px;
-        
-    }
+
     h1{
         font-size:8vw;
     }
 
     .flex>p .container>p{
         font-size: 2.2vw;
+    }
+
+    .flex{
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+    .flex p{
+        font-size: 2.2vw;;
     }
 
     .skillset{
@@ -759,6 +811,10 @@ h6{ /* headings for each page */
     #thirteen{
         order:12
     }
-    
-    
+    .dropdown-cont{
+        display:none;
+    }
+    .dropdown-but{
+        display:block;
+    }
 }
