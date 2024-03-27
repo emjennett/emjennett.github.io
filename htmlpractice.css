@@ -262,7 +262,7 @@ html, body {
 
 @keyframes heyitsemily{
     from {left: -40vw; top:4vw;  opacity:0}
-    to {left: 42vw;top:4vw;opacity:1}
+    to {left: 20vw;top:4vw;opacity:1}
 
 }
 
@@ -296,7 +296,7 @@ h2{ /* hey im emily */
     font-size: 2.3vw;
     font-weight: 400;
     animation: heyitsemily 1s;
-    left: 42vw;
+    left: 20vw;
     top:4vw;
 
 }
@@ -450,7 +450,7 @@ h5{ /* cat enthusiast */
 }
 
 #skillset{
-    font-size: 1.8vw;
+    font-size: 1.5vw;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     align-self:start;
@@ -506,7 +506,7 @@ h6{ /* headings for each page */
 }
 
 .caption2> a>p, .caption2>a, .elementsec>p, .first>p{
-    font-size: 1.2vw;
+
     font-weight: 400;
     margin: 0 0;
     padding: 0 0;
@@ -675,8 +675,8 @@ h6{ /* headings for each page */
         font-size: 2.2vw;;
     }
 
-    .skillset{
-        font-size: 2.2vw;
+    #skillset{
+        font-size: 3vw;
     }
 
     #titlebigger p{
@@ -715,7 +715,11 @@ h6{ /* headings for each page */
     }
     #invisible, #invisible2{
         visibility: visible;
+        text-align: left;
         order:0;
+    }
+    #numlabel{
+        text-align:right;
     }
 
     #visible{
@@ -737,6 +741,7 @@ h6{ /* headings for each page */
     .grid2 p{
         font-size: 2.2vw;
     }
+
     
 
     .title>p, .arttitle>p, .num>p{
@@ -817,5 +822,10 @@ h6{ /* headings for each page */
     }
     .dropdown-but{
         display:block;
+    }
+    .wrapper{
+        flex-basis:100%;
+        padding-left:6%;
+    
     }
 }
