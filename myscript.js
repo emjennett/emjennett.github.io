@@ -22,7 +22,7 @@ function reveal() {
 
 //drop down function for mobile navigation bar
 function myFunction() {
-  
+
   var x = document.getElementById("myLinks");
   var y = document.getElementById(".wrapper")
   if (x.style.display === "block") {
@@ -43,6 +43,23 @@ var i;
 
 for(i=0; i<dropdown.length;i++){
   dropdown[i].addEventListener("mouseover", function(){
+    this.classList.toggle("active");
+    var dropdownContent=this.nextElementSibling;
+    if (dropdownContent.style.display ==="none"){
+      dropdownContent.style.display = "block";
+    
+    }else{
+      dropdownContent.style.display = "none";
+    }
+  });                                       
+}
+
+//for  mobile  topnav dropdown animation
+var dropdown = document.getElementsByClassName("dropdown-btn2");
+var i;
+
+for(i=0; i<dropdown.length;i++){
+  dropdown[i].addEventListener("click", function(){
     this.classList.toggle("active");
     var dropdownContent=this.nextElementSibling;
     if (dropdownContent.style.display ==="none"){
