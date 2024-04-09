@@ -114,7 +114,7 @@ nav li, ul li{
 
 }
 
-#sidebar .circle {
+.circle {
     height: 2vw;
     width: 2vw;
     background-color: #687A6E;
@@ -612,10 +612,39 @@ h6{ /* headings for each page */
     }
 
     .topnav{
-        display:flex;
-        flex-direction: row;
-        justify-content:flex-end;
+        display:block;
+        width: 100%;
+        position:fixed;
+        height:16vw;
+        background-color: white;
+        opacity: 0.8;
+        z-index: 1;
     }
+
+    h1{
+        font-size:20px;
+    }
+    #name{
+        position: absolute;
+        left:4vw;
+    }
+    .circle{
+        left:10vw;
+        position:absolute;
+        top: 9vw;
+    }
+    a.icon{
+        left:89vw;
+        top:2.5vw;
+        position:absolute;
+        font-size:37px;
+    }
+    
+    .topnav #myLinks {
+        display: none;
+        
+    }
+
     
     .title{
         
@@ -624,11 +653,6 @@ h6{ /* headings for each page */
         align-content: space-between;
     }
  
-
-    #sidebar .circle {
-    height: 2.5vw;
-    width: 2.5vw;
-    }
     #rightside, .arttitle{
         justify-content: center;
         text-align: center;
@@ -659,7 +683,7 @@ h6{ /* headings for each page */
     }
 
     h1{
-        font-size:8vw;
+        font-size:10vw;
     }
 
     .flex>p .container>p{
@@ -827,4 +851,9 @@ h6{ /* headings for each page */
         padding-left:6%;
     
     }
+    .outerwrapper{
+        flex-direction: column;
+        background-color: white;
+    }
+    
 }

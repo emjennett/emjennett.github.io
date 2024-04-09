@@ -1,7 +1,7 @@
 var html ='<div class = "wrapper2"><a id= "name" href="/index.html"><div id = "logowrapper"><h1>ej</h1></a><div class= "circlewrap"><div class="circle"></div></div></div><nav><ul><li class="sub-menu-parent" tab-index="0"><a href="/about.html">about</a></li><li class="sub-menu-parent" tab-index="0"><a href="/contact.html">contact</a></li><li class="sub-menu-parent" tab-index="0"><a href="/portfolio.html">portfolio</a><ul class="sub-menu"><li><a href="portfolio.html#tech">tech</a></li><li><a href="portfolio.html#art">art</a></li></ul></li></ul></nav>'
 document.getElementById('sidebar').innerHTML = html;
 
-
+// adds scroll animations
 function reveal() {
     var reveals = document.querySelectorAll(".elementsec");
   
@@ -17,16 +17,27 @@ function reveal() {
       }
     }
   }
-  
+
   window.addEventListener("scroll", reveal);
 
-  function preload(arrayOfImages) {
-    $(arrayOfImages).each(function(){
-        $('<img/>')[0].src = this;
-        
-    });
+//drop down function for mobile navigation bar
+function myFunction() {
+  
+  var x = document.getElementById("myLinks");
+  var y = document.getElementById(".wrapper")
+  if (x.style.display === "block") {
+    x.style.display = "none";
+    y.style.backgroundColor = "white";
+    y.style.zIndex = "2";
+  } else {
+    x.style.display = "block";
+
+  }
 }
 
+  
+
+//for desktop sidebar dropdown animation
 var dropdown = document.getElementsByClassName("dropdown-btn");
 var i;
 
@@ -42,6 +53,15 @@ for(i=0; i<dropdown.length;i++){
     }
   });                                       
 }
+
+//preloads images
+function preload(arrayOfImages) {
+  $(arrayOfImages).each(function(){
+      $('<img/>')[0].src = this;
+      
+  });
+}
+
 preload([
   "tech.png",
   "art.png",
