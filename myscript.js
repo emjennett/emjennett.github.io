@@ -35,6 +35,31 @@ function myFunction() {
   }
 }
 
+
+
+const element = document.getElementById("topnav");
+  var subMenuParent = document.querySelector('.icon');
+  var overlay = document.querySelector('.overlay');
+  var subMenu = overlay.querySelector('.sub-menu');
+  
+
+  subMenuParent.addEventListener('click', function(e) {
+      if (subMenu.style.visibility === 'hidden') {
+          subMenu.style.visibility = 'visible';
+          subMenu.style.opacity = '1';
+          subMenu.style.zIndex = '1';
+          subMenu.style.transform = 'translateY(0%)';
+          overlay.style.opacity = '0.8';
+          
+      } else {
+          subMenu.style.visibility = 'hidden';
+          subMenu.style.opacity = '0';
+          subMenu.style.zIndex = '-1';
+          subMenu.style.transform = 'translateY(-2em)';
+          overlay.style.opacity = '0';
+      }
+  });
+
   
 
 //for desktop sidebar dropdown animation
