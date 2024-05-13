@@ -1,5 +1,7 @@
 var html ='<div class = "wrapper2"><a id= "name" href="/index.html"><div id = "logowrapper"><h1>ej</h1></a><div class= "circlewrap"><div class="circle"></div></div></div><nav><ul><li class="sub-menu-parent" tab-index="0"><a href="/about.html">about</a></li><li class="sub-menu-parent" tab-index="0"><a href="/contact.html">contact</a></li><li class="sub-menu-parent" tab-index="0"><a href="/portfolio.html">portfolio</a><ul class="sub-menu"><li><a href="portfolio.html#tech">tech</a></li><li><a href="portfolio.html#art">art</a></li></ul></li></ul></nav>'
 document.getElementById('sidebar').innerHTML = html;
+var topnavv = '<a id= "name" href="/index.html"style = "z-index:2;" ><h1 style= "position: absolute;">ej</h1><div class= "circlewrap"><div class="circle" ></div></div></a><div id="myLinks" style = "z-index:1;"><a href="/portfolio.html">home</a><a href="/portfolio.html">portfolio</a><a href="/contact.html">contact</a><a href="/about.html">about</a></div><a href="javascript:void(0);" class="icon" onclick="myFunction()" style = "z-index:2;"><i class="fa fa-bars"></i></a>'
+document.getElementById('topnav').innerHTML = topnavv;
 
 // adds scroll animations
 function reveal() {
@@ -24,14 +26,39 @@ function reveal() {
 function myFunction() {
 
   var x = document.getElementById("myLinks");
-  var y = document.getElementById(".wrapper")
-  if (x.style.display === "block") {
-    x.style.display = "none";
-    y.style.backgroundColor = "white";
-    y.style.zIndex = "2";
-  } else {
-    x.style.display = "block";
 
+
+
+
+
+
+  /* this makes the height shrink when button is clicked */
+  if (x.classList.contains("animate-in")) {
+    
+
+
+    x.classList.remove("animate-in");
+    x.classList.add("animate-out");
+    
+    
+    x.style.height = "0";
+
+  } 
+  /* this makes the height grow when button is clicked */
+  else {
+
+  
+    x.classList.remove("animate-out");
+    x.style.backgroundColor = "white";
+    x.style.opacity = "0.8";
+    
+    
+    x.classList.add("animate-in");
+    x.style.height = "160vh";
+
+    
+
+    
   }
 }
 
@@ -79,22 +106,7 @@ for(i=0; i<dropdown.length;i++){
   });                                       
 }
 
-//for  mobile  topnav dropdown animation
-var dropdown = document.getElementsByClassName("dropdown-btn2");
-var i;
 
-for(i=0; i<dropdown.length;i++){
-  dropdown[i].addEventListener("click", function(){
-    this.classList.toggle("active");
-    var dropdownContent=this.nextElementSibling;
-    if (dropdownContent.style.display ==="none"){
-      dropdownContent.style.display = "block";
-    
-    }else{
-      dropdownContent.style.display = "none";
-    }
-  });                                       
-}
 
 //preloads images
 function preload(arrayOfImages) {
