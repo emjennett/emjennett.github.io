@@ -934,6 +934,10 @@ h6 {
     font-size: 4vw;
   }
 
+  #titlebigger {
+    padding-top: 35px;
+  }
+
   #titlebigger p {
     font-size: 5vw;
   }
