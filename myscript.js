@@ -1,118 +1,109 @@
-var html ='<div class = "wrapper2"><a id= "name" href="/index.html"><div id = "logowrapper"><h1 >ej</h1></a><div class= "circlewrap"><div class="circle"></div></div></div><nav><ul><li class="sub-menu-parent" tab-index="0"><a href="/about.html">about</a></li><li class="sub-menu-parent" tab-index="0"><a href="/contact.html">contact</a></li><li class="sub-menu-parent" tab-index="0"><a href="/portfolio.html">portfolio</a><ul class="sub-menu"><li><a href="portfolio.html#tech">tech</a></li><li><a href="portfolio.html#art">art</a></li></ul></li></ul></nav>'
-document.getElementById('sidebar').innerHTML = html;
-var topnavv = '<a id= "name" href="/index.html"style = "z-index:2;" ><h1 style= "position: absolute;">ej</h1><div class= "circlewrap"><div class="circle" ></div></div></a><div id="myLinks" style = "z-index:1;"><a href="/portfolio.html">home</a><a href="/portfolio.html">portfolio</a><a href="/contact.html">contact</a><a href="/about.html">about</a></div><a href="javascript:void(0);" class="icon" onclick="myFunction()" style = "z-index:2;"><i class="fa fa-bars"></i></a>'
-document.getElementById('topnav').innerHTML = topnavv;
+var html =
+  '<div class = "wrapper2"><a id= "name" href="/index.html"><div id = "logowrapper"><h1 >ej</h1></a><div class= "circlewrap"><div class="circle"></div></div></div><nav><ul><li class="sub-menu-parent" tab-index="0"><a href="/about.html">about</a></li><li class="sub-menu-parent" tab-index="0"><a href="/contact.html">contact</a></li><li class="sub-menu-parent" tab-index="0"><a href="/portfolio.html">portfolio</a><ul class="sub-menu"><li><a href="portfolio.html#tech">tech</a></li><li><a href="portfolio.html#art">art</a></li></ul></li></ul></nav>';
+document.getElementById("sidebar").innerHTML = html;
+var topnavv =
+  '<a id="name" href="/index.html" style="z-index:2;" ><h1 style="position: absolute;">ej</h1><div class="circlewrap"><div class="circle"></div></div></a><div id="myLinks" style="z-index:1;"><a href="/index.html">home</a><a href="/portfolio.html">portfolio</a><a href="/contact.html">contact</a><a href="/about.html">about</a></div><a href="javascript:void(0);" class="icon" onclick="myFunction()" style="z-index:2;"><i class="fa fa-bars"></i></a>';
+document.getElementById("topnav").innerHTML = topnavv;
 
 // adds scroll animations
 function reveal() {
-    var reveals = document.querySelectorAll(".elementsec");
-  
-    for (var i = 0; i < reveals.length; i++) {
-      var windowHeight = window.innerHeight;
-      var elementTop = reveals[i].getBoundingClientRect().top;
-      var elementVisible = 100;
-  
-      if (elementTop < windowHeight - elementVisible) {
-        reveals[i].classList.add("active");
-      } else {
-        reveals[i].classList.remove("active");
-      }
+  var reveals = document.querySelectorAll(".elementsec");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 100;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
     }
-  }
-
-  window.addEventListener("scroll", reveal);
-
-//drop down function for mobile navigation bar
-function myFunction() {
-
-  var x = document.getElementById("myLinks");
-
-
-
-
-
-
-  /* this makes the height shrink when button is clicked */
-  if (x.classList.contains("animate-in")) {
-    
-
-
-    x.classList.remove("animate-in");
-    x.classList.add("animate-out");
-    
-    
-    x.style.height = "0";
-
-  } 
-  /* this makes the height grow when button is clicked */
-  else {
-
-  
-    x.classList.remove("animate-out");
-    x.style.backgroundColor = "white";
-    x.style.opacity = "0.8";
-    
-    
-    x.classList.add("animate-in");
-    x.style.height = "160vh";
-
-    
-
-    
   }
 }
 
+window.addEventListener("scroll", reveal);
 
+// Function to make the first element visible on mobile without animation
+function initMobileFirst() {
+  // Check if we're on mobile
+  if (window.innerWidth <= 767) {
+    // Get the first .elementsec (which has ID "stationary")
+    var firstElement = document.getElementById("stationary");
+    if (firstElement) {
+      // Apply styles directly to ensure it's visible right away
+      firstElement.style.transform = "translateY(0)";
+      firstElement.style.opacity = "1";
+      firstElement.style.transition = "none";
+    }
+  }
+}
+
+// Run the mobile initialization on page load
+window.addEventListener("DOMContentLoaded", initMobileFirst);
+
+//drop down function for mobile navigation bar
+function myFunction() {
+  var x = document.getElementById("myLinks");
+
+  /* this makes the height shrink when button is clicked */
+  if (x.classList.contains("animate-in")) {
+    x.classList.remove("animate-in");
+    x.classList.add("animate-out");
+
+    x.style.height = "0";
+  } else {
+    /* this makes the height grow when button is clicked */
+    x.classList.remove("animate-out");
+    x.style.backgroundColor = "white";
+    x.style.opacity = "0.8";
+
+    x.classList.add("animate-in");
+    x.style.height = "160vh";
+  }
+}
 
 const element = document.getElementById("topnav");
-  var subMenuParent = document.querySelector('.icon');
-  var overlay = document.querySelector('.overlay');
-  var subMenu = overlay.querySelector('.sub-menu');
-  
+var subMenuParent = document.querySelector(".icon");
+var overlay = document.querySelector(".overlay");
+var subMenu = overlay.querySelector(".sub-menu");
 
-  subMenuParent.addEventListener('click', function(e) {
-      if (subMenu.style.visibility === 'hidden') {
-          subMenu.style.visibility = 'visible';
-          subMenu.style.opacity = '1';
-          subMenu.style.zIndex = '1';
-          subMenu.style.transform = 'translateY(0%)';
-          overlay.style.opacity = '0.8';
-          
-      } else {
-          subMenu.style.visibility = 'hidden';
-          subMenu.style.opacity = '0';
-          subMenu.style.zIndex = '-1';
-          subMenu.style.transform = 'translateY(-2em)';
-          overlay.style.opacity = '0';
-      }
-  });
-
-  
+subMenuParent.addEventListener("click", function (e) {
+  if (subMenu.style.visibility === "hidden") {
+    subMenu.style.visibility = "visible";
+    subMenu.style.opacity = "1";
+    subMenu.style.zIndex = "1";
+    subMenu.style.transform = "translateY(0%)";
+    overlay.style.opacity = "0.8";
+  } else {
+    subMenu.style.visibility = "hidden";
+    subMenu.style.opacity = "0";
+    subMenu.style.zIndex = "-1";
+    subMenu.style.transform = "translateY(-2em)";
+    overlay.style.opacity = "0";
+  }
+});
 
 //for desktop sidebar dropdown animation
 var dropdown = document.getElementsByClassName("dropdown-btn");
 var i;
 
-for(i=0; i<dropdown.length;i++){
-  dropdown[i].addEventListener("mouseover", function(){
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("mouseover", function () {
     this.classList.toggle("active");
-    var dropdownContent=this.nextElementSibling;
-    if (dropdownContent.style.display ==="none"){
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "none") {
       dropdownContent.style.display = "block";
-    
-    }else{
+    } else {
       dropdownContent.style.display = "none";
     }
-  });                                       
+  });
 }
-
-
 
 //preloads images
 function preload(arrayOfImages) {
-  $(arrayOfImages).each(function(){
-      $('<img/>')[0].src = this;
-      
+  $(arrayOfImages).each(function () {
+    $("<img/>")[0].src = this;
   });
 }
 
@@ -129,16 +120,28 @@ preload([
   "abstract.jpg",
   "thering.png",
   "deer.jpg",
-  "pfp.jpg"
+  "pfp.jpg",
 ]);
 
-  //switches out first element of index.html when on mobile so animation doesn't apply
-  $(document).ready(function() {
-    if ($(window).width() < 800) {
-        var element = $('#stationary');
-        if (element.length > 0 && element.hasClass('elementsec')) {
-            element.removeClass('elementsec').addClass('first');
-        }
+//switches out first element of index.html when on mobile so animation doesn't apply
+$(document).ready(function () {
+  if ($(window).width() < 800) {
+    var element = $("#stationary");
+    if (element.length > 0 && element.hasClass("elementsec")) {
+      element.removeClass("elementsec").addClass("first");
     }
+  }
 });
 
+document.documentElement.style.setProperty(
+  "--nav-height",
+  document.getElementById("topnav").offsetHeight + "px"
+);
+
+// Update it if window is resized
+window.addEventListener("resize", function () {
+  document.documentElement.style.setProperty(
+    "--nav-height",
+    document.getElementById("topnav").offsetHeight + "px"
+  );
+});

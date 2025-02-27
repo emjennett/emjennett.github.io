@@ -1,172 +1,269 @@
 <!DOCTYPE html>
-<head> 
-  <link rel="icon" href="ej..svg">
-    <title>Ice Cream Dash</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="htmlpractice.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
+<head>
+  <link rel="icon" href="ej..svg" />
+  <title>Ice Cream Dash</title>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="htmlpractice.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet"
+  />
 </head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <body>
-  <div class = "outerwrapper">
-        
-    <div id="sidebar"> 
-        
+  <div class="outerwrapper">
+    <div id="sidebar"></div>
+    <div id="topnav"></div>
+  </div>
+  <div class="flex">
+    <div
+      id="carouselExampleIndicators"
+      class="carousel slide"
+      data-ride="carousel"
+    >
+      <ol class="carousel-indicators">
+        <li
+          data-target="#carouselExampleIndicators"
+          data-slide-to="0"
+          class="active"
+        ></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            class="d-block w-100"
+            src="swingvershome-01.png"
+            alt="First slide"
+          />
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="icecream.png" alt="Second slide" />
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="swingvers-01.jpg" alt="Third slide" />
+        </div>
+      </div>
+      <a
+        class="carousel-control-prev"
+        href="#carouselExampleIndicators"
+        role="button"
+        data-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a
+        class="carousel-control-next"
+        href="#carouselExampleIndicators"
+        role="button"
+        data-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
-    <div id = "topnav">
 
+    <div id="two" class="title" style="font-weight: 900; margin-top: 10px">
+      <p>Ice Cream Dash</p>
     </div>
-</div>
-    <div class = "flex">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img class="d-block w-100" src="swingvershome-01.png" alt="First slide">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="icecream.png" alt="Second slide">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="swingvers-01.jpg" alt="Third slide">
-              </div>
+
+    <p id="three" style="color: #dd5a9b; font-weight: 600">
+      GUI: Java & Swing GUI | Mobile: Native Android, XML, Java
+    </p>
+    <div id="four" class="title">
+      <p>objectives</p>
+    </div>
+    <p id="five">
+      Ice Cream Dash is a Java-based game where you are tasked with filling an
+      ice cream cone with specific toppings. The menu display informs the player
+      which toppings are needed to be stacked on the cone to complete the order.
+      With each incorrect topping that is stacked, the player loses a life. If
+      the player loses all 3 possible lives, the game is over. If they manage to
+      stack all the necessary toppings within their 3 lives, they win the game!
+    </p>
+    <div id="six" class="title">
+      <p>development</p>
+    </div>
+    <p id="seven">
+      Ice Cream Dash utilizes hitboxes whose sizes are calculated from the
+      topping's size and the y-position of the cone. Since each topping has a
+      different size, there is one specific hitbox for each topping. Toppings
+      are painted continuously using a falling function, which is modulated
+      using collision detection.
+    </p>
+    <div id="eight" class="title">
+      <p>future</p>
+    </div>
+    <p id="nine">
+      For future developments, Ice Cream Dash can use a varying speed factor for
+      the falling toppings. This can be introduced as the player progresses
+      through the game which would increase the difficulty. Also, an addition of
+      a database for high scores can provide a means for not only competing with
+      personal best scores, but also with other players. This will encourage
+      players to continue their efforts to beat their fellow Ice Cream Dash
+      players!
+    </p>
+
+    <div id="ten" class="title">
+      <p>mobile</p>
+    </div>
+
+    <div id="eleven" class="container" style="padding: 0 0">
+      <div id="main" style="float: right">
+        <div
+          id="carouselExampleIndicators-2"
+          data-interval="false"
+          class="carousel slide"
+          data-ride="carousel"
+          style="max-width: 250px"
+        >
+          <ol class="carousel-indicators">
+            <li
+              data-target="#carouselExampleIndicators"
+              data-slide-to="0"
+              class="active"
+            ></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                class="d-block w-100"
+                src="mobilemenu.png"
+                alt="First slide"
+              />
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
-        </div>
-
-        <div id = "two" class= "title" style= "font-weight: 900;">
-            <p>Ice Cream Dash</p>
-        </div>
-
-        <p id = "three" style = "color : #dd5a9b; font-weight: 600;"> GUI: Java & Swing GUI  |  Mobile: Native Android, XML, Java</p>
-        <div id = "four" class= "title" >
-            <p>objectives</p>
-        </div>
-        <p id = "five"> Ice Cream Dash is a Java-based game where you are tasked with filling an ice cream cone with specific
-            toppings. The menu display informs the player which toppings are needed to be stacked on the cone
-            to complete the order. With each incorrect topping that is stacked, the player loses a life.
-            If the player loses all 3 possible lives, the game is over. If they manage to stack all the necessary
-            toppings within their 3 lives, they win the game!
-        </p>
-        <div id = "six" class= "title">
-            <p>development</p>
-        </div>
-        <p id = "seven"> Ice Cream Dash utilizes hitboxes whose 
-            sizes are calculated from the topping's size and the y-position of the cone. 
-            Since each topping has a different size, there is one specific hitbox for each topping.
-              Toppings are painted continuously using a falling function, which is modulated using collision detection. 
-              </p>
-        <div id = "eight" class= "title">
-            <p>future</p>
-        </div>
-        <p id = "nine">
-            For future developments, Ice Cream Dash can use a varying speed factor for the falling toppings. This can be
-            introduced as the player progresses through the game which would increase the difficulty.
-             Also, an addition 
-            of a database for high scores can provide a means for not only competing with personal best scores, but also with
-            other players. This will encourage players to continue their efforts to beat their fellow Ice Cream 
-            Dash players!
-        </p>
-
-        <div id = "ten" class= "title">
-            <p>mobile</p>
-        </div>
-
-        <div id = "eleven" class = "container" style = "padding: 0 0;">
-            <div id="main" style = "float:right;">
-        <div id="carouselExampleIndicators-2" data-interval="false" class="carousel slide" data-ride="carousel" style = "max-width: 250px;">
-            <ol class="carousel-indicators">
-              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            </ol>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img class="d-block w-100" src="mobilemenu.png" alt="First slide">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="mobileinstr.png" alt="Second slide">
-              </div>
-            
+            <div class="carousel-item">
+              <img
+                class="d-block w-100"
+                src="mobileinstr.png"
+                alt="Second slide"
+              />
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators-2" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators-2" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
+          </div>
+          <a
+            class="carousel-control-prev"
+            href="#carouselExampleIndicators-2"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carouselExampleIndicators-2"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
+      </div>
+
+      <p>
+        By use of Android Studio and XML formatting, I converted the Swing UI
+        into a fully functional native Android application. Several elements of
+        the game had to be altered, including the touch events and, of course,
+        the UI painting.<br /><br />Given the complexity of the bitmap
+        interactions, I decided to use graphics.Canvas to paint the entirety of
+        the game onto a SurfaceView. Instead of the use of the arrow keys to
+        control the keyboard, the cone is controlled by touching either the left
+        or right side of the screen. <br />
+        <br />
+        For future developments, I believe it would be an improvement to use a
+        GestureListener to move the cone, which would be able to detect left or
+        right swipe directions. However, this might make the game either too
+        easy (since the cone wouldn't take as long to reach your desired
+        destination), or too difficult (maybe the rapid movements of the cone
+        and fingers would interfere with having a grasp with where the toppings
+        are). Either way, it was a challenge attempting to wrangle
+        GestureListener, so I decided to omit it for now.
+
+        <br /><br />
+
+        Another layer of complexity that can make the game interesting would be
+        to include a stacking-order requirement. With this, the player would
+        lose a life with each incorrectly placed topping. It's the cherry on top
+        (literally, lol)!
+      </p>
     </div>
 
-        <p >
-            By use of Android Studio and XML formatting, I converted the Swing UI into a fully functional native Android 
-            application. Several elements of the game had to be altered, including the touch events and, of course, the 
-            UI painting.<br><br>Given the complexity of the bitmap interactions, I decided to use graphics.Canvas to paint the 
-            entirety of the game onto a SurfaceView. Instead of the use of the arrow keys to control the keyboard, the cone
-            is controlled by touching either the left or right side of the screen. 
-            <br> <br> 
-            For future developments, I believe it would be an improvement to use a GestureListener to move the cone, which
-            would be able to detect left or right swipe directions. However, this might make the game either too easy (since
-            the cone wouldn't take as long to reach your desired destination), or too difficult (maybe the rapid movements of the
-            cone and fingers would interfere with having a grasp with where the toppings are). Either way, it was a challenge
-            attempting to wrangle GestureListener, so I decided to omit it for now.
-
-            <br><br>
-
-            Another layer of complexity that can make the game interesting would be to include a stacking-order requirement.
-            With this, the player would lose a life with each incorrectly placed topping. It's the cherry on top (literally, lol)!
-        </p>
-
+    <div
+      id="carouselExampleIndicators-3"
+      data-interval="false"
+      class="carousel slide"
+      data-ride="carousel"
+    >
+      <ol class="carousel-indicators">
+        <li
+          data-target="#carouselExampleIndicators"
+          data-slide-to="0"
+          class="active"
+        ></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="losing.png" alt="First slide" />
         </div>
-
-        <div id="carouselExampleIndicators-3" data-interval="false" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            </ol>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img class="d-block w-100" src="losing.png" alt="First slide">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="won.png" alt="Second slide">
-              </div>
-            
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators-3" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators-3" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="won.png" alt="Second slide" />
         </div>
-        <div id = "thirteen" style= "grid-column:1/3" class="footer">
-            <p>©2024 ~ Emily Jennett</p>
-        </div>
+      </div>
+      <a
+        class="carousel-control-prev"
+        href="#carouselExampleIndicators-3"
+        role="button"
+        data-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a
+        class="carousel-control-next"
+        href="#carouselExampleIndicators-3"
+        role="button"
+        data-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
+    <div id="thirteen" style="grid-column: 1/3" class="footer">
+      <p>©2024 ~ Emily Jennett</p>
+    </div>
+  </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"
+  ></script>
 
-    <script src="myscript.js"></script>
-
-</body> 
+  <script src="myscript.js"></script>
+</body>
